@@ -5,9 +5,15 @@
 //----------------------------------------------------------
 function ubahHuruf(kata) {
     var result = "";
-        for (var i = 0; i < kata.length; i++) {
+
+    for (var i = 0; i < kata.length; i++) {
+        if (kata[i] !== "z") {
             result += String.fromCharCode(kata.charCodeAt(i) + 1);
+        } else {
+            result += String.fromCharCode(kata.charCodeAt(i) - 25);
         }
+    }
+
     return result;
 }
 
